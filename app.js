@@ -41,6 +41,57 @@ function AfficherMenu(){
   console.log("Votre choix :")
 }
 
+// FONCTION DU CHOIX 1
+async function ajouter() {
+  console.log('--- Ajouter une observation ---');
+  const id = await demander('Point observé (ex. S11) : ');
+  if (id === null) return;
+  const parcelle = await demander('Parcelle (ex. P1) : ');
+  if (parcelle === null) return;
+  const texture = await demander(`Texture (${TEXTURES.join(', ')}) : `);
+  if (texture === null) return;
+  const pH = await demander('pH (nombre de 0 à 14, sans unité, virgule acceptée) : ');
+  if (pH === null) return;
+  const etatHumidite = await demander(`État d'humidité (${HUMIDITES.join(', ')}) : `);
+  if (etatHumidite === null) return;
+
+  const saisie = {
+    id: id.toUpperCase(),
+    parcelle: parcelle.toUpperCase(),
+    texture: texture.toLowerCase(),
+    pH,
+    etatHumidite: etatHumidite.toLowerCase(),
+  };
+
+  const erreurs = ajouterObservation(observations, saisie);
+  if (erreurs.length > 0) {
+    console.log('Observation refusée :');
+    for (const erreur of erreurs) {
+      console.log(`  - ${erreur}`);
+    }
+    console.log(`Le carnet compte toujours ${observations.length} observation(s).`);
+    return;
+  }
+
+  await enregistrerJson(FICHIER_DONNEES, observations);
+  console.log(`Observation ${saisie.id} ajoutée. Le carnet compte ${observations.length} observation(s).`);
+}
+
+
+// FONCTION DU CHOIX 2
+function lister() {
+  console.log(`--- Liste des observations (${observations.length}) ---`);
+  console.log(listerObservations(observations));
+}
+
+async function executerChoix(choix) {
+  switch (choix) {
+    case '1': await ajouter(); break;
+    default:
+      console.log(`Choix inconnu : « ${choix} ». Tapez un chiffre du menu.`);
+  }
+}
+
 async function main() {
   ouvrirSaisie();
   AfficherAccueil();
@@ -50,6 +101,21 @@ async function main() {
   const Etat = true;
   while(Etat){
    AfficherMenu();
+   const choix = await demander('Votre choix : ');
+    if (choix === null || choix === '0') {
+      console.log('Au revoir !');
+      break;
+    }
+
+    try {
+      await executerChoix(choix);
+    } catch (erreur) {
+      if (String(erreur.message).startsWith('TODO')) {
+        console.log(`À compléter : ${erreur.message}`);
+      } else {
+        console.log(`Erreur inattendue : ${erreur.message}`);
+      }
+    }
   }
   fermerSaisie();
 }
