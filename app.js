@@ -30,11 +30,27 @@ async function ChargementCarnet(){
   }
 }
 
+function AfficherMenu(){
+  console.log("--------------------- MENU ---------------------")
+  console.log("1. Ajouter une observation")
+  console.log("2. Lister les observations")
+  console.log("3. Rechercher (point, parcelle, texture)")
+  console.log("4. Trier par pH")
+  console.log("5. Synthèse des observations")
+  console.log("0. Quitter")
+  console.log("Votre choix :")
+}
+
 async function main() {
   ouvrirSaisie();
   AfficherAccueil();
   ChargementCarnet();
   //console.log("À compléter : écrivez le menu dans app.js (fiches/3-ajouter-lister.md).");
+
+  const Etat = true;
+  while(Etat){
+   AfficherMenu();
+  }
   fermerSaisie();
 }
 
