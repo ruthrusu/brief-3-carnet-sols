@@ -15,3 +15,10 @@
 | Bonus | | | |
 
 **Blocages** (le message exact, ce que j'ai essayé, la solution) : ✏️
+`- Message exact:`
+
+`ce que j'ai essayé:`
+
+`la solution:`
+
+
