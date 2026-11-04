@@ -118,11 +118,29 @@ async function rechercher() {
   }
 }
 
+// AJOUT DE LA FONCTION CHOIX 4
+async function trier() {
+  console.log('--- Trier ---');
+  console.log('1. Par pH croissant');
+  console.log('2. Par pH décroissant');
+  const sousChoix = await demander('Votre choix : ');
+  if (sousChoix === null) return;
+
+  if (sousChoix === '1') {
+    console.log(listerObservations(trierParPh(observations)));
+  } else if (sousChoix === '2') {
+    console.log(listerObservations(trierParPhDecroissant(observations)));
+  } else {
+    console.log('Choix inconnu : retour au menu.');
+  }
+}
+
 async function executerChoix(choix) {
   switch (choix) {
     case '1': await ajouter(); break;
     case '2': await lister(); break;
     case '3': await rechercher(); break;
+    case '4': await trier(); break;
     default:
       console.log(`Choix inconnu : « ${choix} ». Tapez un chiffre du menu.`);
   }
