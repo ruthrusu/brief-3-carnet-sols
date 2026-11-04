@@ -122,17 +122,48 @@ async function rechercher() {
 async function trier() {
   console.log('--- Trier ---');
   console.log('1. Par pH croissant');
-  console.log('2. Par pH décroissant');
   const sousChoix = await demander('Votre choix : ');
   if (sousChoix === null) return;
 
   if (sousChoix === '1') {
     console.log(listerObservations(trierParPh(observations)));
-  } else if (sousChoix === '2') {
-    console.log(listerObservations(trierParPhDecroissant(observations)));
   } else {
     console.log('Choix inconnu : retour au menu.');
   }
+}
+
+// AJOUT DE LA FONCTION CHOIX 5
+async function synthese() {
+  console.log('--- Synthèse des observations ---');
+  console.log(`Nombre d'observations : ${observations.length}`);
+
+  const extremes = phMinMax(observations);
+  if (extremes === null) {
+    console.log('pH minimum et maximum : aucune donnée');
+  } else {
+    console.log(`pH minimum : ${extremes.min} · pH maximum : ${extremes.max}`);
+  }
+
+  console.log('Observations par texture :');
+  for (const [texture, nombre] of Object.entries(compterParTexture(observations))) {
+    console.log(`  ${texture} : ${nombre}`);
+  }
+
+  const frequente = textureLaPlusFrequente(observations);
+  if (frequente === null) {
+    console.log('Texture la plus fréquente : aucune donnée');
+  } else {
+    console.log(`Texture la plus fréquente : ${frequente.texture} (${frequente.nombre} observation(s))`);
+  }
+
+  const aDiscuter = pointsADiscuter(observations, SEUIL_PH_A_DISCUTER);
+  console.log(`Points à discuter avec le coach (pH < ${SEUIL_PH_A_DISCUTER}) : ${aDiscuter.length}`);
+  for (const observation of aDiscuter) {
+    console.log(`  ${formaterObservation(observation)}`);
+  }
+
+  console.log('Rappels : le pH est sans unité. Aucune moyenne de pH n\'est calculée (échelle logarithmique).');
+  console.log('Ces points ne sont pas un diagnostic de fertilisation : ils servent à préparer l\'échange avec le coach.');
 }
 
 async function executerChoix(choix) {
@@ -141,6 +172,7 @@ async function executerChoix(choix) {
     case '2': await lister(); break;
     case '3': await rechercher(); break;
     case '4': await trier(); break;
+    case '5': await synthese(); break;
     default:
       console.log(`Choix inconnu : « ${choix} ». Tapez un chiffre du menu.`);
   }
