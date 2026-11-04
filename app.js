@@ -38,7 +38,6 @@ function AfficherMenu(){
   console.log("4. Trier par pH")
   console.log("5. Synthèse des observations")
   console.log("0. Quitter")
-  console.log("Votre choix :")
 }
 
 // FONCTION DU CHOIX 1
@@ -79,14 +78,51 @@ async function ajouter() {
 
 
 // FONCTION DU CHOIX 2
-function lister() {
+async function lister() {
   console.log(`--- Liste des observations (${observations.length}) ---`);
   console.log(listerObservations(observations));
+}
+
+// FONCTION DU CHOIX 3
+
+async function rechercher() {
+  console.log('--- Rechercher ---');
+  console.log('1. Par point (identifiant)');
+  console.log('2. Par parcelle');
+  console.log("3. Les observations d'une texture");
+  const sousChoix = await demander('Votre choix : ');
+  if (sousChoix === null) return;
+
+  if (sousChoix === '1') {
+    const reponse = await demander('Point : ');
+    if (reponse === null) return;
+    const id = reponse.toUpperCase();
+    const observation = trouverParId(observations, id);
+    console.log(observation === undefined ? `Observation ${id} introuvable.` : formaterObservation(observation));
+  } else if (sousChoix === '2') {
+    const reponse = await demander('Parcelle : ');
+    if (reponse === null) return;
+    const parcelle = reponse.toUpperCase();
+    const trouvees = filtrerParParcelle(observations, parcelle);
+    console.log(`${trouvees.length} observation(s) sur la parcelle ${parcelle} :`);
+    console.log(listerObservations(trouvees));
+  } else if (sousChoix === '3') {
+    const reponse = await demander('Texture : ');
+    if (reponse === null) return;
+    const texture = reponse.toLowerCase();
+    const trouvees = filtrerParTexture(observations, texture);
+    console.log(`${trouvees.length} observation(s) de texture ${texture} :`);
+    console.log(listerObservations(trouvees));
+  } else {
+    console.log('Choix inconnu : retour au menu.');
+  }
 }
 
 async function executerChoix(choix) {
   switch (choix) {
     case '1': await ajouter(); break;
+    case '2': await lister(); break;
+    case '3': await rechercher(); break;
     default:
       console.log(`Choix inconnu : « ${choix} ». Tapez un chiffre du menu.`);
   }
@@ -95,7 +131,7 @@ async function executerChoix(choix) {
 async function main() {
   ouvrirSaisie();
   AfficherAccueil();
-  ChargementCarnet();
+  await ChargementCarnet();
   //console.log("À compléter : écrivez le menu dans app.js (fiches/3-ajouter-lister.md).");
 
   const Etat = true;
