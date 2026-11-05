@@ -7,6 +7,7 @@ import { chargerJson, enregistrerJson } from './src/stockage.js';
 import { HUMIDITES, TEXTURES, ajouterObservation, formaterObservation, listerObservations, trouverParId } from './src/registre.js';
 import { filtrerParParcelle, filtrerParTexture, trierParPh } from './src/recherche.js';
 import { SEUIL_PH_A_DISCUTER, compterParTexture, phMinMax, pointsADiscuter } from './src/synthese.js';
+import { trierParPhDecroissant } from './src/bonus.js';
 
 const FICHIER_DONNEES = 'donnees/observations.json';
 // INSECTION D'UNE FONCTION POUR AFFICHER L'ACCUEIL
@@ -122,13 +123,16 @@ async function rechercher() {
 async function trier() {
   console.log('--- Trier ---');
   console.log('1. Par pH croissant');
+  console.log('2. Par pH decroissant')
   const sousChoix = await demander('Votre choix : ');
   if (sousChoix === null) return;
 
   if (sousChoix === '1') {
     console.log(listerObservations(trierParPh(observations)));
-  } else {
-    console.log('Choix inconnu : retour au menu.');
+  } else if(sousChoix === '2') {
+  console.log(listerObservations(trierParPhDecroissant(observations)));
+  } else{
+ console.log('Choix inconnu: retour au menu.');
   }
 }
 

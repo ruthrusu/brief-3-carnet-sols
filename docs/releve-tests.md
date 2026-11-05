@@ -16,11 +16,11 @@ s04, s09, s07, s02
 
 | Action | Attendu | Obtenu | Testeur |
 | --- | --- | --- | --- |
-| ✏️ | | | |
-| ✏️ | | | |
-| ✏️ | | | |
-| ✏️ | | | |
-| ✏️ | | | |
-| ✏️ | | | |
+| Ajout valide |L'observation doit etre ajoutée | | |
+| Chaque règle refusée |Aucune observation | | |
+| Chaque tri (pH croissant) |tri succès | | |
+| Une recherche introuvable |Intriuvable | | |
+| La synthèse |Affichage des statistiques de l'observation | | |
+| Un choix inconnu | Aucuneobservation enregistrée | | |
 
 **Sur un autre poste** (`git clone`, `node app.js`, `npm test`, en suivant le README) : ✏️
