@@ -11,8 +11,8 @@
 | Fiche 5 : synthèse ; choix 5 | 02/11/2026|04/11/2026 | |
 | Tests par un camarade ; mes propres tests |03/11/2026 |05/11/2026 | |
 | Fiche agronomique ; README ; documents |03/11/2026 |03/11/2026 - 05/11/2026 | |
-| Dépôt cloné et lancé ailleurs ; démonstration répétée | | | |
-| Bonus | _|_ |_ |
+| Dépôt cloné et lancé ailleurs ; démonstration répétée |04/11/2026 | 05/11/2026| |
+| Bonus | _|05/11/2026 | |
 
 **Blocages** (le message exact, ce que j'ai essayé, la solution) : 
 
