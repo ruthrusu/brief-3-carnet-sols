@@ -23,4 +23,4 @@ Le sol pourrait être sec parce que le relevé a eu lieu après une période san
 
 - Pas de moment du relevé : impossible de relier l'humidité à la météo. Le pH « incertain » est aussi une classe, pas une valeur mesurée.
 
-Sources : Fiche C; carnet d'observation des sols · Relu par le coach le : ✏️
+Sources : Fiche C; Brief3-carnet d'observation des sols · Relu par le coach le : ✏️
