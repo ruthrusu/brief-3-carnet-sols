@@ -11,10 +11,15 @@
 | `etatHumidite`|Humidité du sol lors du relevé |texte |`sec, intermédiaire, humidité` |- |sec |
 
 **Listes de valeurs autorisées** : 
+
 `-`Texture: `sableux, limoneux, argileux`
+
 `-` Etats d'humidité: `sec, intermédiaire, humidité`
+
 `-`pH: compris entre 0 et 14 inclus
 
 **Sources** : 
+
 `-` SUJET.md
-`-` Donnees\observations.json   
+
+`-` .donnees\observations.json   
