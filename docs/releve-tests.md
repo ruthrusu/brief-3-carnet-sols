@@ -16,11 +16,14 @@ s04, s09, s07, s02
 
 | Action | Attendu | Obtenu | Testeur |
 | --- | --- | --- | --- |
-| Ajout valide |L'observation doit etre ajoutée | | |
-| Chaque règle refusée |Aucune observation | | |
-| Chaque tri (pH croissant) |tri succès | | |
-| Une recherche introuvable |Intriuvable | | |
-| La synthèse |Affichage des statistiques de l'observation | | |
-| Un choix inconnu | Aucuneobservation enregistrée | | |
+| Ajout valide |L'observation doit etre ajoutée | conforme | jean-marie DADIE |
+| Chaque règle refusée |Aucune observation |conforme |jean-marie DADIE |
+| Chaque tri (pH croissant) |tri succès |conforme |jean-marie DADIE |
+| Une recherche introuvable |Intriuvable |conforme |jean-marie DADIE |
+| La synthèse |Affichage des statistiques de l'observation |conforme |jean-marie DADIE |
+| Un choix inconnu | Aucuneobservation enregistrée |conforme |jean-marie DADIE |
 
-**Sur un autre poste** (`git clone`, `node app.js`, `npm test`, en suivant le README) : ✏️
+**Sur un autre poste** (`git clone`, `node app.js`, `npm test`, en suivant le README) :
+node app.js: toutes les tests données marche
+npm test: 30 tests valide 
+testeur: Jean-Marie DADIE
