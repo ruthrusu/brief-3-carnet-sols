@@ -9,7 +9,7 @@
 
 **Un lien possible avec l'eau ou les plantes**, pour l'une des deux :
 
-- constat (ce que dit le carnet) : 
+- constat (ce que dit le carnet) :
 
 Les deux points de P3 sont notés « sec » alors que le sol est limoneux.
 
@@ -17,6 +17,10 @@ Les deux points de P3 sont notés « sec » alors que le sol est limoneux.
 
 Le sol pourrait être sec parce que le relevé a eu lieu après une période sans pluie, plutôt qu'à cause de la texture. Pour le vérifier, refaire le relevé à un autre moment, par exemple après une pluie, et comparer.
 
-**Deux limites du carnet** (une seule observation par point, classes d'exercice, pas de moment du relevé, seuil de 5,5 simple repère…) : ✏️
+**Deux limites du carnet** (une seule observation par point, classes d'exercice, pas de moment du relevé, seuil de 5,5 simple repère…) : 
 
-Sources : ✏️ · Relu par le coach le : ✏️
+- Une seule observation par point : on ne sait pas si « sec » est stable ou ponctuel.
+
+- Pas de moment du relevé : impossible de relier l'humidité à la météo. Le pH « incertain » est aussi une classe, pas une valeur mesurée.
+
+Sources : Fiche C; carnet d'observation des sols · Relu par le coach le : ✏️

@@ -42,7 +42,7 @@ Junior Djongon m'a expliqué le principe d'une fonction dans une fonction et com
 
 **qui j'ai aidé, sur quoi ?**
 
- J'ai aidé Assié Cédric Konan à comprendre pourquoi il fallait mettre ""pH" encore avant ceci: ${observation.pH} dans la fonction trierParPh.
+ J'ai aidé Assié Cédric Konan à comprendre pourquoi il fallait mettre "pH" encore avant ceci: ${observation.pH} dans la fonction trierParPh.
 
  J'ai expliqué à Victoire Grâce Adom le principe des a.pH - b-pH dans la fonction.
 
