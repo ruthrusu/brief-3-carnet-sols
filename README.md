@@ -33,7 +33,8 @@ Sous PowerShell, si `npm` est bloqué : `npm.cmd test`.
 - *`[x]`*Trier par pH
 - *`[x]`* Synthèse : pH minimum et maximum, nombre par texture, points à discuter (pH < 5,5)
 - [ ] Bonus : supprimer et modifier une observation (choix 6 et 7)
-- [ ] Bonus : tri par pH décroissant, texture la plus fréquente
+- *`[x]`* Bonus : tri par pH décroissant, 
+- [ ] Bonus : texture la plus fréquente
 
 ## Données
 
@@ -43,7 +44,7 @@ Le fichier: .donnees\observations.js
 
 Le nombre d'observations: 10
 
-Les champs: Id; Parcelle; Textures; pH; etat d'humidité
+Les champs: Id; Parcelle; Textures; pH (valeur comprise en 0 et 14); etat d'humidité.
 
 
 ## Limites
