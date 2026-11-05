@@ -4,9 +4,9 @@
 
 | Tâche | Prévu | Fait le | Preuve |
 | --- | --- | --- | --- |
-| Poste et dépôt prêts ; besoin compris ; documents commencés | | | |
-| Fiche 2 : lire et écrire le JSON | | | |
-| Fiche 3 : ajouter et lister ; choix 1 et 2 ; erreurs | | | |
+| Poste et dépôt prêts ; besoin compris ; documents commencés |02/11/2026| 02/11/2026| |
+| Fiche 2 : lire et écrire le JSON | 02/11/2026| 02/11/2026| |
+| Fiche 3 : ajouter et lister ; choix 1 et 2 ; erreurs |03/11/2026|03/11/2026 | |
 | Fiche 4 : rechercher et trier ; choix 3 et 4 | | | |
 | Fiche 5 : synthèse ; choix 5 | | | |
 | Tests par un camarade ; mes propres tests | | | |
@@ -15,6 +15,7 @@
 | Bonus | | | |
 
 **Blocages** (le message exact, ce que j'ai essayé, la solution) : ✏️
+
 `- Message exact:`
 
 `ce que j'ai essayé:`

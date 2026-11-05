@@ -4,8 +4,8 @@
 
 | Point | Parcelle | Texture | pH | Humidité | Le constat, en une phrase |
 | --- | --- | --- | --- | --- | --- |
-| ✏️ | | | | | |
-| ✏️ | | | | | |
+|  | | | | | |
+|  | | | | | |
 
 **Un lien possible avec l'eau ou les plantes**, pour l'une des deux :
 

@@ -6,7 +6,7 @@
 | --- | --- | --- | --- | --- | --- |
 | `id` | Identifiant unique | texte | non vide, absent des données | — | P02 |
 | `parcelle` |Surface délimitée et identifiée |texte |Obligatoire, non vide|- |P2 |
-| `texture` |Classe granulométriqu du sol |texte |`sableux, limoneux, argileux`|- |sableux |
+| `texture` |Classe granulométrique du sol |texte |`sableux, limoneux, argileux`|- |sableux |
 | `pH`| Mesure du potentienl d'hydrogène|nombre |compris entre 0 et 14 inclus|Aucune|4.8 |
 | `etatHumidite`|Humidité du sol lors du relevé |texte |`sec, intermédiaire, humidité` |- |sec |
 
